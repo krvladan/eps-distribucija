@@ -14,12 +14,12 @@ jobs:
       uses: actions/checkout@v2
     - name: Fetch latest data
       run: |-
-        curl https://www.epsdistribucija.rs/index.php/informacije/saopstenja > saopstenja.html
-        curl https://www.epsdistribucija.rs/Dan_0_Iskljucenja.htm > planirana-iskljucenja-beograd.html
-        curl https://www.epsdistribucija.rs/NoviSad_Dan_0_Iskljucenja.htm > planirana-iskljucenja-novi-sad.html
-        curl https://www.epsdistribucija.rs/Kraljevo_Dan_0_Iskljucenja.htm > planirana-iskljucenja-kraljevo.html
-        curl https://www.epsdistribucija.rs/Kragujevac_Dan_0_Iskljucenja.htm > planirana-iskljucenja-kragujevac.html
-        curl https://www.epsdistribucija.rs/Nis_Dan_0_Iskljucenja.htm > planirana-iskljucenja-nis.html
+        curl https://elektrodistribucija.rs/aktuelnosti/saopstenja/saopstenja > saopstenja.html
+        curl https://elektrodistribucija.rs/Dan_0_Iskljucenja.htm > planirana-iskljucenja-beograd.html
+        curl https://elektrodistribucija.rs/NoviSad_Dan_0_Iskljucenja.htm > planirana-iskljucenja-novi-sad.html
+        curl https://elektrodistribucija.rs/Kraljevo_Dan_0_Iskljucenja.htm > planirana-iskljucenja-kraljevo.html
+        curl https://elektrodistribucija.rs/Kragujevac_Dan_0_Iskljucenja.htm > planirana-iskljucenja-kragujevac.html
+        curl https://elektrodistribucija.rs/Nis_Dan_0_Iskljucenja.htm > planirana-iskljucenja-nis.html
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
